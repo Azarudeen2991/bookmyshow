@@ -7,13 +7,14 @@ import lombok.Setter;
 
 import java.util.List;
 
+@Entity(name = "users")
 @Getter
 @Setter
-@Entity(name = "users")
 public class User extends BaseModel {
     private String email;
     private String name;
     private String phoneNumber;
+    private String password;
     @OneToMany
     private List<Booking> bookings;
 }
